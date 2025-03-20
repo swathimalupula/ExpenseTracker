@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from tracker import views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Django admin panel
     path('tracker/', include('tracker.urls')),  # Include app URLs
     path('accounts/', include('django.contrib.auth.urls')),
+    path('', views.expense_list, name='home'), 
 ]
