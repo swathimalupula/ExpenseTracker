@@ -1,0 +1,7 @@
+<h2>Expense List</h2>
+<ul>
+    {% for expense in expenses %}
+        <li>{{ expense.date }} - {{ expense.category }}: ₹{{ expense.amount }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'monthly_report' %}">View Monthly Report</a>

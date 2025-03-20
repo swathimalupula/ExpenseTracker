@@ -1,0 +1,7 @@
+<h2>Monthly Report</h2>
+<ul>
+    {% for expense in expenses %}
+        <li>{{ expense.date }} - {{ expense.category }}: ₹{{ expense.amount }}</li>
+    {% endfor %}
+</ul>
+<p><strong>Total:</strong> ₹{{ total }}</p>
